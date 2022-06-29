@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "879332757912",
+    "project_id": "flip2play",
+    "storage_bucket": "flip2play.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879332757912:android:68e98e331e2786754a5bed",
+        "android_client_info": {
+          "package_name": "com.frantic.flip2play"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879332757912-cde5gq6asbd34485g1vgh4b564vm2q1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAV6VSqhdquCMnHLaVmUdTZFTHZmhLEdb4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879332757912-cde5gq6asbd34485g1vgh4b564vm2q1j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
