@@ -1,14 +1,8 @@
-import 'dart:convert';
-
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:cashfree_pg/cashfree_pg.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:howzatt/Bloc/WalletBloc/WalletBloc.dart';
 import 'package:howzatt/Repository/MatchRepository.dart';
@@ -18,12 +12,10 @@ import 'package:howzatt/services/ServicesLocator.dart';
 import 'package:howzatt/services/UserDataServcie.dart';
 import 'package:howzatt/ui/DashBoard/BottomNavigation.dart';
 import 'package:howzatt/ui/DashBoard/Contest/ContestMainPage.dart';
-import 'package:howzatt/utils/ApiConstants.dart';
 import 'package:howzatt/utils/ColorConstants.dart';
 import 'package:howzatt/utils/Dialogs/DialogUtil.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
-import 'package:http/http.dart' as http;
-import 'package:paytm_allinonesdk/paytm_allinonesdk.dart';
+
 import '../../../Bloc/MatchBloc/MatchBloc.dart';
 
 class CaptainAndViceCaptain extends StatelessWidget {
@@ -667,7 +659,7 @@ class _CaptainAndViceCaptainState extends State<CaptainAndViceCaptainStateful> w
                             decoration: BoxDecoration(
                               //color: ColorConstants.colorLoginBtn,
                               borderRadius: BorderRadius.circular(10.h),
-                              border: Border(
+                              border: const Border(
                                 left: BorderSide(
                                   color: Colors.grey,
                                   width: 0.8,
@@ -815,7 +807,7 @@ class _CaptainAndViceCaptainState extends State<CaptainAndViceCaptainStateful> w
                                                     transactionDo = true;
                                                   });
                                                   Get.back();
-                                                  BlocProvider.of<WalletBloc>(dialogContext).add(AddWalletEvent(context: context,amount: widget.amount.toString(),type: "debit",status: "completed",user_id:userDataService.userData.id.toString(),isFromSuccess:false));
+                                                  BlocProvider.of<WalletBloc>(dialogContext).add(AddWalletEvent(context: context,amount: widget.amount.toString(),type: "debit",status: "completed",user_id:userDataService.userData.id.toString(),isFromSuccess:false,));
                                                 },
                                                 child: Container(
                                                     width: 200.w,

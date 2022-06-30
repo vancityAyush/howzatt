@@ -742,13 +742,15 @@ class _HomePageState extends State<HomePageStateful> {
                       [i]["matches"][j]["season"]["key"]
                   .toString()) ==
               false) {
-            leaguesKeyList.add(MatchLeague(
+            MatchLeague league = MatchLeague(
                 response.data["data"]["months"][0]["days"][i]["matches"][j]
-                        ["season"]["name"]
+                ["season"]["name"]
                     .toString(),
                 response.data["data"]["months"][0]["days"][i]["matches"][j]
-                        ["season"]["key"]
-                    .toString()));
+                ["season"]["key"]
+                    .toString());
+            if(!leaguesKeyList.contains(league))
+            leaguesKeyList.add(league);
           }
         });
       }
